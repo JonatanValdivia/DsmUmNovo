@@ -1,0 +1,16 @@
+package br.senai.sp.jandira;
+
+import br.senai.sp.jandira.model.Conta;
+
+public class App {
+
+	public static void main(String[] args) {
+		Conta c1;
+		Conta c2;
+		//Deve-se criar as variaveis c1 e c2 para armazenarem os objetos "new Conta();" 
+		c1 = new Conta();
+		c2 = new Conta();
+		System.out.println("Hello");
+	}
+
+}

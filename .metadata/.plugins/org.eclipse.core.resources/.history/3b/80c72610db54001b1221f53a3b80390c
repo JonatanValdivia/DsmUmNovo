@@ -1,0 +1,25 @@
+package br.senai.sp.jandira;
+
+import br.senai.sp.jandira.model.Conta;
+
+public class App {
+
+	public static void main(String[] args) {
+		Conta c1;
+		Conta c2;
+		/*Deve-se criar as variaveis c1 e c2 para armazenarem
+		  os objetos "c1 = new Conta();"*/ 
+		c1 = new Conta();
+		c2 = new Conta();
+		//Chamando o atributo desejado e adicionando um valor a ele
+		c1.numero = "111-0";
+		c1.titular = "Ana Maria Braga";
+		c1.tipo = "Corrente";
+		c1.saldo = 2000.0;
+		c1.ativa = true;
+		System.out.println(c1.numero);
+		System.out.println("Nome: " + c1.titular);
+		System.out.println("Saldo é: " + c1.saldo);
+	}
+
+}
