@@ -1,0 +1,38 @@
+package br.senai.sp.jandira.model;
+
+public class Conta {
+	
+	public String tipo;
+	private double saldo;
+	public String numero;
+	public String titular; 
+	public boolean ativa;
+	public double limite;
+	public double chequeEspecial;
+	public void depositar(double valorDeposito) {
+		if(valorDeposito < 0) {
+			System.out.println("O valor deve ser maior que zero!");
+		}else {
+			saldo += valorDeposito;
+		}
+		System.out.println("Depósito de: " + valorDeposito);
+	}
+	
+	public void mostrarSaldoDaConta() {
+		System.out.println("Saldo da conta: " + saldo);
+		System.out.println("Saldo + limite: " + (saldo + chequeEspecial));
+	}
+	
+	public void sacar(double valorDoSaque) {
+		if(valorDoSaque <= (saldo + chequeEspecial)) { 
+			saldo -= valorDoSaque; 
+			System.out.println("Saque de: " + valorDoSaque);
+		} else {
+			System.out.println("Você não tem saldo sufuciente e ultrapassou o limite");
+		  }
+	}
+	
+	public void transferir() {
+		
+	}
+}

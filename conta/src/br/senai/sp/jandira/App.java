@@ -3,35 +3,40 @@ package br.senai.sp.jandira;
 import br.senai.sp.jandira.model.Conta;
 
 public class App {
-
+ 
 	public static void main(String[] args) {
-		Conta contaAnaMaria;
-		Conta contaPedroCabral;
+		Conta contaDaAna;
+		Conta contaDoJoao;
 		/*Deve-se criar as variaveis c1 e c2 para armazenarem
 		  os objetos "c1 = new Conta();"*/ 
-		contaAnaMaria = new Conta();
-		contaPedroCabral = new Conta();
+		contaDaAna = new Conta();
+		contaDoJoao = new Conta();
 		//Chamando o atributo desejado e adicionando um valor a ele
-		contaAnaMaria.numero = "111-0";
-		contaAnaMaria.titular = "Ana Maria Braga";
-		contaAnaMaria.tipo = "Corrente";
-		contaAnaMaria.ativa = true;
-		contaAnaMaria.depositar(100);
-		
-		System.out.println("Nome: " + contaAnaMaria.titular);
-		contaAnaMaria.consultarSaldo();
-		contaAnaMaria.depositar(300);
-		contaAnaMaria.consultarSaldo();
-		contaAnaMaria.depositar(-50);
-		contaAnaMaria.consultarSaldo();
-		
-		System.out.println("\n--------------------\n");
-		contaPedroCabral.numero = "222-0";
-		contaPedroCabral.titular = "Pedro Cabral";
-		contaPedroCabral.tipo = "Poupança";
-		contaPedroCabral.ativa = true;
-		System.out.println("Nome: " + contaPedroCabral.titular);
-		
+		contaDaAna.numero = "111-98";
+		contaDaAna.titular = "Ana Gomes";
+		contaDaAna.tipo = "Corrente";
+		contaDaAna.ativa = true;
+		contaDaAna.chequeEspecial = 200;
+		contaDaAna.depositar(100);
+		contaDaAna.mostrarSaldoDaConta();
+		contaDaAna.depositar(50);
+		contaDaAna.mostrarSaldoDaConta();
+		contaDaAna.sacar(50);
+		contaDaAna.mostrarSaldoDaConta();
+		contaDaAna.sacar(450);
+		contaDaAna.mostrarSaldoDaConta();
+		contaDaAna.sacar(300);
+		contaDaAna.mostrarSaldoDaConta();
+		contaDaAna.depositar(228);
+		contaDaAna.mostrarSaldoDaConta();
+		contaDaAna.getSaldo();
+        
+		somar(10, 5);
 	}
-
+	
+	//Métodos e parâmetros
+	public static int somar(int valor1, int valor2) {
+		int resultado = valor1 + valor2;
+		return resultado; 
+	}
 }
